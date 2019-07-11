@@ -1,6 +1,6 @@
 {
   "name": "@nettpack/ckeditor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "build of CKEditor 5",
   "main": "./build/ckeditor.js",
   "files": [

@@ -43,27 +43,29 @@ export const plugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	Save
+	Save,
 ];
 
 // Editor configuration.
 export const config = {
-	toolbar: [
-		'heading',
-		'save',
-		'|',
-		'bold',
-		'italic',
-		'link',
-		'bulletedList',
-		'numberedList',
-		'imageUpload',
-		'blockQuote',
-		'insertTable',
-		'mediaEmbed',
-		'undo',
-		'redo'
-	],
+	toolbar:{
+		items: [
+			'heading',
+			'save',
+			'|',
+			'bold',
+			'italic',
+			'link',
+			'bulletedList',
+			'numberedList',
+			'imageUpload',
+			'blockQuote',
+			'insertTable',
+			'mediaEmbed',
+			'undo',
+			'redo'
+		],
+	},
 	image: {
 		toolbar: [
 			'imageStyle:full',
