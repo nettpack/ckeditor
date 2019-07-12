@@ -63,6 +63,10 @@ module.exports = {
 				use: [ 'raw-loader' ]
 			},
 			{
+				test: /\.less$/,
+				loader: ['style-loader', 'css-loader', 'less-loader']
+			},
+			{
 				test: /\.css$/,
 				use: [
 					{
@@ -85,3 +89,16 @@ module.exports = {
 		]
 	}
 };
+
+
+// {
+// 	test: /\.(css|less)$/,
+// 		use: ExtractStylePlugin.extract({
+// 	use: [
+// 		// { loader: "to-string-loader" },
+// 		{ loader: "css-loader" },
+// 		{ loader: "less-loader" },
+// 	],
+// 	fallback: "style-loader"
+// })
+// },

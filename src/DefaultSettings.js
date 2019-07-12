@@ -20,6 +20,8 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Save from './plugins/Save';
+import Source from "./plugins/Source";
+import PositionToolbar from "./plugins/PositionToolbar";
 
 export const plugins = [
 	Essentials,
@@ -44,6 +46,8 @@ export const plugins = [
 	Table,
 	TableToolbar,
 	Save,
+	Source,
+	PositionToolbar
 ];
 
 // Editor configuration.
@@ -51,7 +55,9 @@ export const config = {
 	toolbar:{
 		items: [
 			'heading',
+			'|',
 			'save',
+			'source',
 			'|',
 			'bold',
 			'italic',

@@ -19,9 +19,20 @@ export default class Save extends Plugin {
 	init() {
 		const editor = this.editor;
 
+		// editor.keystrokes.set( 'Ctrl+S', ( keyEvtData, cancel ) => {
+		// 	if (typeof this.onSave !== 'function') {
+		// 		alert('onSave event has not been set!');
+		// 		return;
+		// 	}
+		// 	this.onSave(editor.getData(), editor);
+		// 	cancel();
+		// } );
+		// editor.setKeystroke﻿([
+		// 	[ CKEDITOR.CTRL + 83, 'save' ],
+		// ]);
+
 		editor.ui.componentFactory.add( 'save', locale => {
 			const view = new ButtonView( locale );
-
 			view.set( {
 				label: 'Save',
 				icon: imageIcon,
@@ -31,7 +42,7 @@ export default class Save extends Plugin {
 			// Callback executed once the image is clicked.
 			view.on( 'execute', () => {
 				if (typeof this.onSave !== 'function') {
-					console.error('onSave event has not been set!');
+					alert('onSave event has not been set!');
 					return;
 				}
 				this.onSave(this.editor.getData(), this.editor);
